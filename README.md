@@ -1,6 +1,3 @@
-# weather-app
-
-
 # Weather App - Temperature Città Italiane
 
 Applicazione Spring Boot che mostra le temperature delle ultime 2 settimane per 8 città italiane utilizzando le API di open-meteo.com.
@@ -22,12 +19,14 @@ weather-app/
 │       │   └── service/
 │       │       └── WeatherService.java         # Logica business
 │       └── resources/
-│           ├── application.properties          # Configurazione app
-│           ├── static/                         # Contenuti statici accessibili via HTTP
-│           │   └── css/
-│           │       └── style.css               # Foglio di stile esterno
-│           └── templates/
-│               └── index.html                  # Template Thymeleaf aggiornato con <link>
+            ├── static/
+            │   ├── css/
+            │   │   └── style.css
+            │   └── js/
+            │       └── Weather.js          <--  script JS per i grafici
+            └── templates/
+                └── index.html              <--  view Thymeleaf con i canvas e script inclusi
+
 ├── pom.xml                                      # Dipendenze Maven
 ├── Dockerfile                                   # Configurazione Docker
 ├── docker-compose.yml                           # Orchestrazione Docker
